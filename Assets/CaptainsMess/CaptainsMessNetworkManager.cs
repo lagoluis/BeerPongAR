@@ -617,11 +617,6 @@ public class CaptainsMessNetworkManager : CaptainsMessLobbyManager
             discoveryClient.StopBroadcast();
         }
 
-        // Stop broadcasting as a server
-        if (discoveryServer.running) {
-            discoveryServer.StopBroadcast();
-        }
-
         SendJoinedLobbyMessage();
 
         joinedLobby = true;
