@@ -6,13 +6,14 @@ using UnityEngine.UI;
 
 public class BP_Listener : Listener 
 {
-       public enum BeerPongNetworkState{
-           Init,
-           Offline,
-           Connecting,
-           Connected,
-           Disrupted
-       }
+    public enum BeerPongNetworkState
+    {
+        Init,
+        Offline,
+        Connecting,
+        Connected,
+        Disrupted
+    };
        [HideInInspector]
        public BeerPongNetworkState networkState = BeerPongNetworkState.Init;
        public Text networkStateField;

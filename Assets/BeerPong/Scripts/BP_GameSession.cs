@@ -142,8 +142,12 @@ public class BP_GameSession : NetworkBehaviour
     [Server]
     IEnumerator RunGame()
     {    
-      gameState = BP_GameState.WaitForLocationSync;
-        yield return null;
+        gameState = BP_GameState.WaitForLocationSync;
+        while(!AllPlayersHaveSyncedLocation())
+        {
+            yield return null;
+        }
+        gameState = BP_GameState.WaitingForRolls;
     }
    
     [Server]

@@ -105,6 +105,8 @@ public class BP_PlayerScript : BeerPongPlayer {
         image.color = myColor;
         nameField.text = deviceName;
         readyField.gameObject.SetActive(true);
+
+        OnClientReady(IsReady());
     }
     // Use this for initialization
     void Start () {
@@ -165,7 +167,7 @@ public class BP_PlayerScript : BeerPongPlayer {
                 {
                     if(GUILayout.Button("Make Sphere", GUILayout.Width(Screen.width * 0.6f), GUILayout.Height(100))){
                         Transform cameraTransform = _beerPongARSessionManager.CameraTransform();
-                        Vector3 spherePosition = cameraTransform.position + (cameraTransform.forward.normalized * 0.2f); //place sphere 2cm in front of device
+                        Vector3 spherePosition = cameraTransform.position + (cameraTransform.forward.normalized * 0.02f); //place sphere 2cm in front of device
                         CmdMakeSphere(spherePosition, cameraTransform.rotation);
                     }
                 }

@@ -14,7 +14,6 @@ public class BP_NetworkManager : BP_LobbyManager {
     public string peerId;
     public float startHostingDelay = 2; //Look for a server for this many seconds before starting one ourself
     public float allReadyCountdownDuration = 4; //Wait for this many seconds after people are ready before starting the game
-
     public bool verboseLogging = false;
 
     public BeerPongServer discoveryServer;
@@ -450,7 +449,7 @@ public class BP_NetworkManager : BP_LobbyManager {
 
                     if(IsHost())
                     {
-                        SendCountdownCancelledMessage();
+                        SendStartGameMessage(LobbyPlayers());
                     }
                 }
             }
