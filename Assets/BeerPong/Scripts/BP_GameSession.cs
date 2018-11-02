@@ -169,7 +169,7 @@ public class BP_GameSession : NetworkBehaviour
         {
             if (gameState == BP_GameState.Countdown)
             {
-                //message = "Game Starting in " + Mathf.Ceil(networkListener.beerPong.CountdownTimer()) + "...";
+                message = "Game Starting in " + Mathf.Ceil(networkListener.beerPong.CountdownTimer()) + "...";
             }
             else if (specialMessage != "")
             {

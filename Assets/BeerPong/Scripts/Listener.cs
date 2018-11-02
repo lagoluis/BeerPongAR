@@ -6,11 +6,11 @@ using UnityEngine;
 public class Listener : MonoBehaviour {
 
     [HideInInspector]
-    public BP_NetworkManager beerPong;
+    public BeerPong beerPong;
 
     public void Awake()
     {
-        beerPong = FindObjectOfType(typeof(BP_NetworkManager)) as BP_NetworkManager;
+        beerPong = FindObjectOfType(typeof(BeerPong)) as BeerPong;
     }
 
     public virtual void OnStartConnecting()
